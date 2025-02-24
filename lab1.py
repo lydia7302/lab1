@@ -24,7 +24,8 @@ if not url.startswith('https://'):
 print(url)
 
 with requests.get(url) as response:
-    print(response.text)
-   
+   # for key in response.headers:
+    #    print(f"Name:{key}, []:{response.header[key]}")
+   print(f"Server:{response.headers.get('Server')}")
 
 
